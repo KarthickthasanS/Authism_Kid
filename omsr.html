@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Autism Kids</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="home.html"
+        ><img src="images/logo.png" style="height: 50px; width: 100%"
+      /></a>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="omsr.html">OMSR </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="emotionalcard.html">EMOTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ene.html">E&NE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="autismform.html">EVALUATION FORM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">DESCRIPTION</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h3>OBJECT MATCHING & SOUND RECOGNITION EXCERCISE</h3>
+    <div class="container">
+      <div class="left">
+        <div class="image-container" data-animal="elephant">
+          <img src="images/elephant1.jpeg" alt="Elephant" />
+        </div>
+        <div class="image-container" data-animal="lion">
+          <img src="images/lion1.png" alt="Lion" />
+        </div>
+        <div class="image-container" data-animal="giraffe">
+          <img src="images/giraffe1.png" alt="Giraffe" />
+        </div>
+        <div class="image-container" data-animal="tiger">
+          <img src="images/tiger1.png" alt="Tiger" />
+        </div>
+      </div>
+      <div class="right">
+        <div class="object-container">
+          <img
+            src="images/elephant2.png"
+            alt="Elephant"
+            draggable="true"
+            data-animal="elephant"
+          />
+        </div>
+        <div class="object-container">
+          <img
+            src="images/lion2.png"
+            alt="Lion"
+            draggable="true"
+            data-animal="lion"
+          />
+        </div>
+        <div class="object-container">
+          <img
+            src="images/giraffe2.png"
+            alt="Giraffe"
+            draggable="true"
+            data-animal="giraffe"
+          />
+        </div>
+        <div class="object-container">
+          <img
+            src="images/tiger2.png"
+            alt="Tiger"
+            draggable="true"
+            data-animal="tiger"
+          />
+        </div>
+      </div>
+    </div>
+
+    <audio id="elephant-sound" src="audio/elephant.mp3" class="hidden"></audio>
+    <audio id="lion-sound" src="audio/lion.mp3" class="hidden"></audio>
+    <audio id="giraffe-sound" src="audio/giraffe.mp3" class="hidden"></audio>
+    <audio id="tiger-sound" src="audio/tiger.mp3" class="hidden"></audio>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

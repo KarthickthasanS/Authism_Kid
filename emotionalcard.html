@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emotion Learning Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+      .emotion-card {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .emotion-card img,
+      .emotion-card video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .emotion-car hover {
+        transform: scale(1.1);
+        transition: transform 0.5s;
+      }
+      .emotion-card video {
+        display: none;
+      }
+      .emotion-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 5px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="navbar-brand" href="#"
+        ><img src="images/logo.png" style="height: 50px; width: 100%"
+      /></a>
+
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="omsr.html">OMSR </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="emotionalcard.html">EMOTIONS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ene.html">E&NE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="autismform.html">EVALUATION FORM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="info.html">DESCRIPTION</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Learn Emotions</h1>
+    <div class="container">
+      <div class="emotion-card" data-emotion="smile">
+        <img src="images/smile.png" alt="Smile" />
+        <video src="video/smile.mp4" loop muted></video>
+        <div class="emotion-label">Smile</div>
+      </div>
+      <div class="emotion-card" data-emotion="sad">
+        <img src="images/sad.png" alt="Sad" />
+        <video src="video/sad.mp4" loop muted></video>
+        <div class="emotion-label">Sad</div>
+      </div>
+      <div class="emotion-card" data-emotion="angry">
+        <img src="images/angry.jpg" alt="Angry" />
+        <video src="video/angry.mp4" loop muted></video>
+        <div class="emotion-label">Angry</div>
+      </div>
+      <div class="emotion-card" data-emotion="cry">
+        <img src="images/cry.jpg" alt="Cry" />
+        <video src="video/cry.mp4" loop muted></video>
+        <div class="emotion-label">Crying</div>
+      </div>
+      <div class="emotion-card" data-emotion="hurt">
+        <img src="images/hurt.png" alt="Hurt" />
+        <video src="video/hurt.webm" loop muted></video>
+        <div class="emotion-label">Hurt</div>
+      </div>
+      <div class="emotion-card" data-emotion="fear">
+        <img src="images/fear.jpg" alt="Fear" />
+        <video src="video/fear.mp4" loop muted></video>
+        <div class="emotion-label">Fear</div>
+      </div>
+    </div>
+
+    <script>
+      const emotionCards = document.querySelectorAll(".emotion-card");
+
+      emotionCards.forEach((card) => {
+        const img = card.querySelector("img");
+        const video = card.querySelector("video");
+
+        card.addEventListener("mouseenter", () => {
+          img.style.display = "none";
+          video.style.display = "block";
+          video.play();
+        });
+
+        card.addEventListener("mouseleave", () => {
+          img.style.display = "block";
+          video.style.display = "none";
+          video.pause();
+          video.currentTime = 0;
+        });
+      });
+    </script>
+  </body>
+</html>
